@@ -19,5 +19,8 @@ public class StoreContext : DbContext
     public DbSet<Product> Products { get; set; }
 
     public DbSet<ProductPerson> ProductPersons { get; set; }
- 
+
+
+    //Sobrecarga qur toma los modelos que se han definido en configuración
+    
 }

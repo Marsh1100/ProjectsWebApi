@@ -11,5 +11,8 @@ public class Product
     public double SaleValue  { get; set; }
 
     public ICollection<ProductPerson> ProductPersons { get; set;}
+    public ICollection<Person> Persons { get; set;} = new HashSet<Person>();
+
+
 
 }

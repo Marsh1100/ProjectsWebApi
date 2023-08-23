@@ -10,4 +10,6 @@ public class Person
     public PersonType PersonType { get; set;}
 
     public ICollection<ProductPerson> ProductPersons { get; set;}
+    public ICollection<Product> Products { get; set;} = new HashSet<Product>();
+
 }
