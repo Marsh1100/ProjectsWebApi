@@ -17,5 +17,7 @@ public class StoreContext : DbContext
 
     public DbSet<PersonType> PersonTypes { get; set; }
     public DbSet<Product> Products { get; set; }
+
+    public DbSet<ProductPerson> ProductPersons { get; set; }
  
 }

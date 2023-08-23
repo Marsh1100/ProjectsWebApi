@@ -7,5 +7,7 @@ public class Person
     public string NamePerson  { get; set;}
     public DateTime Birthday { get; set;}
     public int IdPersonTypeFK { get; set;}
+    public PersonType PersonType { get; set;}
 
+    public ICollection<ProductPerson> ProductPersons { get; set;}
 }

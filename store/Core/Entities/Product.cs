@@ -9,4 +9,7 @@ public class Product
     public int MaxStock { get; set; }
     public int Stock { get; set; }
     public double SaleValue  { get; set; }
+
+    public ICollection<ProductPerson> ProductPersons { get; set;}
+
 }
