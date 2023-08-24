@@ -17,6 +17,5 @@ public class CountryConfiguration : IEntityTypeConfiguration<Country>
         builder.Property(p => p.NameCountry)
         .IsRequired()
         .HasMaxLength(50);
-        
     }
 }

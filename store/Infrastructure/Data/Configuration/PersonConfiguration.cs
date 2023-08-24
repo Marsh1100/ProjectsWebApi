@@ -13,6 +13,9 @@ namespace Infrastructure.Data.Configuration
             builder.ToTable("person");
 
             builder.Property(p=> p.Id);
+            builder.Property(p => p.IdPerson)
+            .HasColumnType("int")
+            .IsUnicode();//?
 
             builder.Property(p => p.NamePerson)
             .IsRequired()
@@ -21,9 +24,29 @@ namespace Infrastructure.Data.Configuration
             builder.Property(p => p.Birthday)
             .HasColumnType("date");
 
-            builder.Property(p=> p.Birthday);
-            
+            builder.HasOne(p=>p.PersonType)
+            .WithMany(p=>p.Persons)
+            .HasForeignKey(p => p.IdPersonTypeFK );          
           
+            builder
+            .HasMany(p => p.Products)
+            .WithMany(p => p.Persons)
+            .UsingEntity<ProductPerson>(
+                j => j
+                    .HasOne(pt => pt.Product)
+                    .WithMany(t => t.ProductPersons)
+                    .HasForeignKey(pt => pt.IdProductFK),
+                 j => j
+                    .HasOne(pt => pt.Person)
+                    .WithMany(t => t.ProductPersons)
+                    .HasForeignKey(pt => pt.IdPersonFK),
+                    j=>
+                    {
+                        //Llave compuesta
+                        j.HasKey(t => new {t.IdPersonFK, t.IdProductFK});
+                    }
+                
+            );
         }
     }
 }
