@@ -22,5 +22,9 @@ public class StoreContext : DbContext
 
 
     //Sobrecarga qur toma los modelos que se han definido en configuración
-    
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    }
 }
