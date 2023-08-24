@@ -1,7 +1,7 @@
 
 namespace Core.Entities;
 
-public class ProductPerson
+public class ProductPerson 
 {
     public int IdProductFK { get; set; }
     public Product Product { get; set; }

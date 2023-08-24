@@ -1,9 +1,8 @@
 
 namespace Core.Entities;
 
-public class State
+public class State : BaseEntity
 {
-    public int Id { get; set; }
     public string NameState { get; set;}
     public int IdCountryFK  { get; set; }
 
