@@ -12,10 +12,9 @@ namespace Infrastructure.Data.Configuration
             // utilizando el objeto 'builder'.
             builder.ToTable("person");
 
-            builder.Property(p=> p.Id);
             builder.Property(p => p.IdPerson)
-            .HasColumnType("int")
-            .IsUnicode();//?
+            .IsRequired()
+            .HasMaxLength(50);
 
             builder.Property(p => p.NamePerson)
             .IsRequired()

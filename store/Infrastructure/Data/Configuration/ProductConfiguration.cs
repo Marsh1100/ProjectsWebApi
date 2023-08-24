@@ -12,8 +12,6 @@ namespace Infrastructure.Data.Configuration
             // utilizando el objeto 'builder'.
             builder.ToTable("product");
 
-            builder.Property(p=> p.Id);
-
             builder.Property(p => p.Code)
             .IsRequired()
             .HasMaxLength(50);
