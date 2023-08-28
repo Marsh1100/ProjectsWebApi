@@ -1,12 +1,18 @@
 
 
+using Infrastructure.data;
+using Core.Interfaces;
+using Core.Entities;
+using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
+
 namespace Infrastructure.Repository;
 
 public class GenericRepository<T> : IGenericRepo<T> where T : BaseEntity
 {
-    private readonly InventarioContext _context;
+    private readonly StoreContext _context;
 
-    public GenericRepository(InventarioContext context)
+    public GenericRepository(StoreContext context)
     {
         _context = context;
     }
@@ -29,6 +35,11 @@ public class GenericRepository<T> : IGenericRepo<T> where T : BaseEntity
     public virtual async Task<IEnumerable<T>> GetAllAsync()
     {
         return await _context.Set<T>().ToListAsync();
+    }
+
+    public Task<(int totalRecord, IEnumerable<T> records)> GetAllAsync(int pageIndex, int pageSize, string search)
+    {
+        throw new NotImplementedException();
     }
 
     public virtual async Task<T> GetByIdAsync(int id)

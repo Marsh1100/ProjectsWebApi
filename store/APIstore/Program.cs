@@ -1,9 +1,12 @@
+using Extensions.APIstore;
 using Infrastructure.data;
+
 using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.ConfigureCors();
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<StoreContext>(optionsBuilder=>
@@ -24,6 +27,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+//Nombre de la política del Cors
+app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

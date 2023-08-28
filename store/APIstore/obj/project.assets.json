@@ -1483,19 +1483,19 @@
     ]
   },
   "packageFolders": {
-    "/home/apolT01-060/.nuget/packages/": {}
+    "C:\\Users\\APT01-60\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/apolT01-060/Documents/mb/ProjectsWebApi/store/APIstore/APIstore.csproj",
+      "projectUniqueName": "c:\\Users\\APT01-60\\Documents\\mb\\ProjectsWebApi\\store\\APIstore\\APIstore.csproj",
       "projectName": "APIstore",
-      "projectPath": "/home/apolT01-060/Documents/mb/ProjectsWebApi/store/APIstore/APIstore.csproj",
-      "packagesPath": "/home/apolT01-060/.nuget/packages/",
-      "outputPath": "/home/apolT01-060/Documents/mb/ProjectsWebApi/store/APIstore/obj/",
+      "projectPath": "c:\\Users\\APT01-60\\Documents\\mb\\ProjectsWebApi\\store\\APIstore\\APIstore.csproj",
+      "packagesPath": "C:\\Users\\APT01-60\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\APT01-60\\Documents\\mb\\ProjectsWebApi\\store\\APIstore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/apolT01-060/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\APT01-60\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -1507,8 +1507,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/home/apolT01-060/Documents/mb/ProjectsWebApi/store/Infrastructure/Infrastructure.csproj": {
-              "projectPath": "/home/apolT01-060/Documents/mb/ProjectsWebApi/store/Infrastructure/Infrastructure.csproj"
+            "c:\\Users\\APT01-60\\Documents\\mb\\ProjectsWebApi\\store\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "c:\\Users\\APT01-60\\Documents\\mb\\ProjectsWebApi\\store\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -1561,7 +1561,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

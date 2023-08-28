@@ -11,13 +11,14 @@ namespace Infrastructure.Data.Configuration
             // Aquí puedes configurar las propiedades de la entidad Marca
             // utilizando el objeto 'builder'.
             builder.ToTable("personType");
-            builder.Property(p=> p.IdTypePerson);
 
-            builder.HasKey(p => p.IdTypePerson);
             builder.Property(p => p.Description)
             .IsRequired()
             .HasMaxLength(50);
 
         }
     }
+
+     
+
 }

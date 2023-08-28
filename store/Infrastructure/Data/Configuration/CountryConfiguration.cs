@@ -10,7 +10,7 @@ public class CountryConfiguration : IEntityTypeConfiguration<Country>
     {
         // Aquí puedes configurar las propiedades de la entidad Marca
         // utilizando el objeto 'builder'.
-        builder.ToTable("pais");
+        builder.ToTable("country");
         
         builder.Property(p => p.NameCountry)
         .IsRequired()
